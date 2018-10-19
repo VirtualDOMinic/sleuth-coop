@@ -22,9 +22,9 @@ class App extends Component {
     fetch("/auth")
       .then(res => {
         if (res.ok) {
-          console.log("profileId", res);
+          // console.log("profileId", res);
         } else {
-          console.log("Not authenticated, setting state.");
+          // console.log("Not authenticated, setting state.");
           if (this.state.isAuthenticated)
             this.setState({ isAuthenticated: false });
         }

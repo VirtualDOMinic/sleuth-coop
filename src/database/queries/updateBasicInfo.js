@@ -12,14 +12,14 @@ const updateBasicInfo = userObj =>
         userObj.contact_name,
         userObj.contact_title,
         userObj.contact_email,
-        `${userObj.id}-${userObj.logo_url}`,
+        userObj.logo_url,
         userObj.id
       ]
-    );
-  })
+    )
     .then(res => {
       resolve(res);
     })
     .catch(err => reject(err));
+  })
 
 module.exports = updateBasicInfo;

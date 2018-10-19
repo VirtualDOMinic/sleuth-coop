@@ -37,8 +37,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(fileUpload());
 
-// Serve image files e.g. logos from public file
-app.use('/static', express.static(path.join(__dirname, "./public")))
 
 // Get data routes
 app.get("/profile/:id", profileData.get);
@@ -57,6 +55,9 @@ app.post("/login-check", logincheck.post);
 app.post("/upload", updateInfo.post);
 app.post("/upload-files", uploadFiles.post);
 app.post("/updateBasicInfo", updateBasicInfo.post);
+
+// Serve image files e.g. logos from public file
+app.use('/static', express.static(path.join(__dirname, "./public")))
 
 if (process.env.NODE_ENV === "production") {
   // serve any static files

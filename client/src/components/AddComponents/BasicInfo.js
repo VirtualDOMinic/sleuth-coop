@@ -3,7 +3,7 @@ import React from "react";
 export default class BasicInfo extends React.Component {
   render() {
     const profileData = this.props.profileData;
-    console.log(profileData);
+    // console.log(profileData);
     return (
       <div className="q-category">
         <fieldset id="basic-info-section">

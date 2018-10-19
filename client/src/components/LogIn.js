@@ -60,7 +60,7 @@ export default class LogIn extends React.Component {
         if (typeof res === "number") {
           return (window.location = `/profile/${res}/sme`);
         } else {
-          console.log(res)
+          // console.log(res)
           this.setState({serverError: res});
       }})
       .catch(e => console.log(e))
