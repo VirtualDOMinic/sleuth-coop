@@ -1,6 +1,5 @@
 exports.post = (req, res) => {
   const files = req.files;
-  // console.log("FILES", req.files);
   // cycle through body updating answers database with new answers.
   const fileArr = [];
   for (const key in files) {

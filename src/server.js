@@ -37,6 +37,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(fileUpload());
 
+// Serve image files e.g. logos from public file
+app.use("/static", express.static(path.join(__dirname, "./public")));
 
 // Get data routes
 app.get("/profile/:id", profileData.get);
